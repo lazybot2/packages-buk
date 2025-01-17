@@ -39,9 +39,6 @@ define Package/cgroupfs-mount/install
 	$(INSTALL_DIR) $(1)/usr/bin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/cgroupfs-mount $(1)/usr/bin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/cgroupfs-umount $(1)/usr/bin/
-
-	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./files/cgroupfs-mount.init $(1)/etc/init.d/cgroupfs-mount
 endef
 
 $(eval $(call BuildPackage,cgroupfs-mount))
